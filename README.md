@@ -41,7 +41,7 @@ We encourage the use of the [GitHub Issues](https://guides.github.com/features/i
 
 Acronym | Phrase
  :--- | :---
-ADS-B | [Automatic dependent surveillance – broadcast](https://en.wikipedia.org/wiki/Automatic_dependent_surveillance_%E2%80%93_broadcast)
+ADS-B | [automatic dependent surveillance – broadcast](https://en.wikipedia.org/wiki/Automatic_dependent_surveillance_%E2%80%93_broadcast)
 ATC | [air traffic control](https://en.wikipedia.org/wiki/Air_traffic_control)
 DAA | detect and avoid
 IFR | [instrument flight rules](https://en.wikipedia.org/wiki/Instrument_flight_rules)
@@ -49,12 +49,13 @@ SARP | science and research panel
 sUAS | small unmanned aerial system
 TCAS | [traffic collision avoidance system](https://en.wikipedia.org/wiki/Traffic_collision_avoidance_system)
 UAS  | [unmanned aerial system](https://en.wikipedia.org/wiki/Unmanned_aerial_vehicle)
+UAM | urban air mobility
 UTM  | [UAS traffic management](https://en.wikipedia.org/wiki/Unmanned_aircraft_system_traffic_management)
 VFR | [visual flight rules](https://en.wikipedia.org/wiki/Visual_flight_rules)
 
 ## Sponsors
 
-Development has been funded by a variety of sponsors, primarily U.S. federal agencies, to support a many different aviation safety efforts. This section is reserved for overviews of key funding agencies and the development they supported. It is the sponsor's discretion to provide content for this section.
+Development has been funded by a variety of sponsors, primarily U.S. federal agencies, to support many different aviation safety efforts. This section is reserved for overviews of key funding agencies and the development they supported. It is the sponsor's discretion to provide content for this section.
 
 ### UAS ExCom Science and Research Panel
 
@@ -86,7 +87,7 @@ To enable assessment of aviation safety systems such as collision avoidance or d
 
 The encounter models are described in the brief introductory material that follows as well as in comprehensive technical reports.
 
-Generally speaking, there are two types of encounter model: correlated and uncorrelated, where correlation is defined as a statistical dependence between conflicting aircraft due to factors before before a collision avoidance system like TCAS or a UAS DAA system acts, modeling at least 60 seconds prior to a closet point of approach. If a sufficient correlation exists, then it must be modeled. One of the main causes of correlation in encounters that must be accounted for in the models is air traffic control; however, air traffic control is not directly applicable to all UAS operational concepts. It is possible that NASA prototype UTM separation services may induce a similar correlation, provided the conflict is made aware to UTM. However as of August 2019, since there are currently no accepted or operational UTM services, encounters with sUAS are assumed to be uncorrelated.
+Generally speaking, there are two types of encounter model: correlated and uncorrelated, where correlation is defined as a statistical dependence between conflicting aircraft due to factors before before a collision avoidance system like TCAS or a UAS DAA system acts, modeling at least 60 seconds prior to a closet point of approach. If a sufficient correlation exists, then it must be modeled. One of the main causes of correlation in encounters that must be accounted for in the models is air traffic control; however, air traffic control is not directly applicable to all UAS operational concepts. It is possible that NASA prototype UTM separation services may induce a similar correlation, provided the conflict is made aware to UTM. However as of October 2019, since there are currently no accepted or widely operational UTM services, encounters with sUAS are assumed to be uncorrelated.
 
 Citations are listed in descending chronological order, which the newest entries listed first. Clicking the arrow next the citation will display the Bibtex entry for each citation. Each Bibtex entry includes a URL to access the citation. All citations can also be found in the Zotero group, [airspace-encounter-model](https://www.zotero.org/groups/2359172/airspace-encounter-models/items).
 
@@ -153,19 +154,23 @@ Citations are listed in descending chronological order, which the newest entries
 
 ### Manned Correlated Model
 
+A Bayesian network used to generate random close encounters between transponder-equipped (cooperative) aircraft. This is the only model that explicitly models two aircraft.
+
 <details> <summary> N. Underhill, E. Harkleroad, R. Guendel, D. Maki, and M. Edwards, “Correlated Encounter Model for Cooperative Aircraft in the National Airspace System; Version 2.0,” Massachusetts Institute Technology Lincoln Laboratory Lexington United States, May 2018.</summary>
 <p>
 
 ```tex
 @techreport{underhillCorrelatedEncounterModel2018,
-	title = {Correlated {Encounter} {Model} for {Cooperative} {Aircraft} in the {National} {Airspace} {System}; {Version} 2.0},
-	url = {https://apps.dtic.mil/docs/citations/AD1051496},
-	language = {en},
-	urldate = {2019-01-16},
-	institution = {Massachusetts Institute Technology Lincoln Laboratory Lexington United States},
-	author = {Underhill, N. and Harkleroad, E. and Guendel, R. and Maki, D. and Edwards, M.},
-	month = may,
-	year = {2018}
+  title = {Correlated {{Encounter Model}} for {{Cooperative Aircraft}} in the {{National Airspace System}}; {{Version}} 2.0},
+  url = {https://apps.dtic.mil/docs/citations/AD1051496},
+  author = {Underhill, N.K and Harkleroad, E.P and Guendel, R.E and Weinert, A.J and Maki, D.E and Edwards, M.W.M},
+  type = {Project {{Report}}},
+  language = {en},
+  number = {ATC-440},
+  institution = {{Massachusetts Institute of Technology, Lincoln Laboratory}},
+  month = may,
+  year = {2018},
+  pages = {140}
 }
 ```
 </p>
@@ -190,6 +195,8 @@ Citations are listed in descending chronological order, which the newest entries
 
 ### Manned Due Regard
 
+A Bayesian network trained using using the enhanced Traffic Management System (ETMS) data feed that was provided by the Volpe Center to describe aircraft operating in international airspace.
+
 <details> <summary> J. D. Griffith, M. W. Edwards, R. M. Miraflor, and A. J. Weinert, “Due Regard Encounter Model Version 1.0,” Massachusetts Institute of Technology, Lincoln Laboratory, Lexington, MA, Project Report ATC-397, Aug. 2013.</summary>
 <p>
 
@@ -211,6 +218,8 @@ Citations are listed in descending chronological order, which the newest entries
 </details>
 
 ### Manned Helicopter Air Ambulance Model
+
+A Bayesian network describe trained using flight operational quality assurance (FOQA) data provided by a Massachusetts-based HAA provider.
 
 *Note a technical description of this model has not been publicly released yet. This model was developed to support sUAS well clear research. Until model-specific documentation is released, please cite the following paper.*
 
@@ -236,7 +245,9 @@ Citations are listed in descending chronological order, which the newest entries
 
 ### Manned Littoral Model
 
-*Note this model has been deprecated by the manned uncorrelated model 2.0. Appendix C describes a revised process from the early encounter models for initializing uncorrelated encounters and estimating metrics.*
+A Bayesian network model that describes how aircraft behavior in the littoral regions of the United States. This model has been deprecated by the manned uncorrelated model 2.0.
+
+*Note that Appendix C in CASSATT-2 describes a revised process from the early encounter models for initializing uncorrelated encounters and estimating metrics.*
 
 <details> <summary> M. W. Edwards, “Encounter Models for the Littoral Regions of the National Airspace System” Massachusetts Institute of Technology, Lincoln Laboratory, CASSATT-2, Sep. 2010.</summary>
 <p>
@@ -258,6 +269,8 @@ Citations are listed in descending chronological order, which the newest entries
 </details>
 
 ### Manned Uncorrelated Model
+
+A Bayesian network model trained using 1200-code aircraft tracks.
 
 <details> <summary> A. J. Weinert, E. P. Harkleroad, J. D. Griffith, M. W. Edwards, and M. J. Kochenderfer, “Uncorrelated Encounter Model of the National Airspace System Version 2.0,” Massachusetts Institute of Technology, Lincoln Laboratory, Lexington, MA, Project Report ATC-404, Aug. 2013.</summary>
 <p>
@@ -308,7 +321,7 @@ Citations are listed in descending chronological order, which the newest entries
 	type = {Project {Report}},
 	title = {Uncorrelated {Encounter} {Model} of the {National} {Airspace} {System} version 1.0},
 	number = {ATC-345},
-	institution = {MIT Lincoln Laboratory, Lexington, Massachusetts},
+	institution = {Massachusetts Institute of Technology, Lincoln Laboratory},
 	author = {Kochenderfer, M. J. and Kuchar, J. K. and Espindle, L. P. and Griffith, J. D.},
 	url = {https://www.ll.mit.edu/r-d/publications/uncorrelated-encounter-model-national-airspace-system-version-10},
 	year = {2008}
@@ -318,6 +331,8 @@ Citations are listed in descending chronological order, which the newest entries
 </details>
 
 ### Manned Unconventional Model
+
+A set of nine individual Bayesian network models encompassing ultralights, gliders, balloons, and airships. This model is based on more than 96,000 unconventional aircraft tracks.
 
 <details> <summary> M. W. Edwards, M. J. Kochendedrfer, J. K. Kuchar, and L. P. Espindle, “Encounter Models for Unconventional Aircraft, Version 1.0,” Massachusetts Institute of Technology, Lincoln Laboratory, Project Report ATC-348, 2009.</summary>
 <p>
@@ -338,7 +353,9 @@ Citations are listed in descending chronological order, which the newest entries
 
 ### Unmanned Uncorrelated Model
 
-  *Note this model is not a Bayesian Network like the others. Instead representative trajectories are generated by taking account of the operational intent of a UAS based on open source maps of infrastructure, recreational regions, and other common sUAS surveillance targets.*
+This discriminative model takes into account the operational intent of UAS commercial operations and generates trajectories based on open source maps of infrastructure, recreational regions, and other common sUAS surveillance targets. This model is not a generative Bayesian Network like the others.
+  
+This model is applicable for some commercial operations, such as long linear infrastructure inspection, governed by 14 CFR Part 107 (sUAS rule) or 14 CFR Part 135 (air carrier). It is not applicable for sUAS recreational and amateur operations governed by 14 CFR Part 101 or 49 U.S.C. 44809.
 
 <details> <summary> A. Weinert and N. Underhill, “Generating Representative Small UAS Trajectories using Open Source Data,” in 2018 IEEE/AIAA 37th Digital Avionics Systems Conference (DASC), 2018, pp. 1–10.</summary>
 <p>
@@ -363,30 +380,35 @@ Citations are listed in descending chronological order, which the newest entries
 
 The previous [Documentation](#documentation) section provided technical details for each of the models. This section describes the different encounter categories when pairing trajectories from the models. Generally speaking, encounters can be correlated (e.g. ATC involvement) or uncorrelated (e.g. aircraft blunder into close proximity).
 
-This section describes the encounter categories for different pairing of aircraft. The first column denotes the aircraft of interest (ownship) while the first row denotes the intruder aircraft. There are four encounter categories:
+This section describes the encounter categories for different pairing of aircraft. The first column denotes the aircraft of interest (ownship) while the first row denotes the intruder aircraft. These are the primary encounter categories:
 
 - C = correlated, assumes ATC involvement
 - D = uncorrelated, due regard oceanic state aircraft without ATC involvement
 - U = uncorrelated aircraft likely equipped with transponders but without ATC involvement
 - V = uncorrelated unconventional aircraft likely without transponders and without ATC involvement
+- X = not required or applicable
+- ? = unknown, in development or has not been defined
 
 ### Manned vs Manned
 
-&nbsp; | [Discrete code](#manned-correlated-model) | [1200 Mode C / VFR](#manned-uncorrelated-model) | [Noncooperative conventional](#manned-unconventional-model) | [Noncooperative Unconventional](#manned-unconventional-model) | [Helicopter Air Ambulance](#manned-helicopter-air-ambulance-model)
-:---  | :---:  | :---:  | :---:  | :---:  | :---:
-**[Discrete code / IFR](#manned-correlated-model)** | C | C | U | V | C
-**[1200 Mode C / VFR](#manned-uncorrelated-model)** | C | U | U | V | U
-**[Due Regard](#manned-due-regard)** | U | U | U | V | N/A
+&nbsp; | [Discrete code](#manned-correlated-model) | [1200 Mode C / VFR](#manned-uncorrelated-model) | [Noncooperative conventional](#manned-unconventional-model) | [Noncooperative Unconventional](#manned-unconventional-model) | [Helicopter Air Ambulance](#manned-helicopter-air-ambulance-model) | UAM
+:---  | :---:  | :---:  | :---:  | :---:  | :---: | :---:
+**[Discrete code / IFR](#manned-correlated-model)** | C | C | U | V | C | ?
+**[1200 Mode C / VFR](#manned-uncorrelated-model)** | C | U | U | V | U | ?
+**[Due Regard](#manned-due-regard)** | U | U | U | V | X | ?
+**UAM** | ? | ? | ? | ? | ? | ?
 
 ### Unmanned vs Manned
 
-&nbsp; | [Discrete code](#manned-correlated-model) | [1200 Mode C / VFR](#manned-uncorrelated-model) | [Noncooperative conventional](#manned-unconventional-model) | [Noncooperative Unconventional](#manned-unconventional-model) | [Helicopter Air Ambulance](#manned-helicopter-air-ambulance-model)
-:---  | :---:  | :---:  | :---:  | :---:  | :---:
-**[sUAS](#unmanned-uncorrelated-model)** | N/A | U | U | V | U
+&nbsp; | [Discrete code](#manned-correlated-model) | [1200 Mode C / VFR](#manned-uncorrelated-model) | [Noncooperative conventional](#manned-unconventional-model) | [Noncooperative Unconventional](#manned-unconventional-model) | [Helicopter Air Ambulance](#manned-helicopter-air-ambulance-model) | UAM
+:---  | :---:  | :---:  | :---:  | :---:  | :---: | :---:
+**[sUAS - Commercial](#unmanned-uncorrelated-model)** | ? | U | U | V | U | ?
+**sUAS - Recreational** | X | X | X | X | X | ?
+**UAM** | ? | ? | ? | ? | ? | ?
 
 ### Unmanned vs Unmanned
 
-The aviation community is currently focused on enabling UAS airspace integration and unmanned vs manned encounters. The SARP is currently working towards defining encounter categories for unmanned vs unmanned encounters. This section is scheduled to be updated in 2020. 
+The aviation community is currently focused on enabling UAS airspace integration and unmanned vs manned encounters. The SARP is currently working towards defining encounter categories for unmanned vs unmanned encounters. This section is scheduled to be updated in 2020.
 
 ## Download
 
@@ -414,7 +436,7 @@ Clicking the arrow next the citation will display the Bibtex entry for each cita
 
 ### Historical Perspective
 
-Airspace encounter models have evolved significantly over the past 35 years. Starting in the 1980s with a model of aircraft equipped with transponders that are cooperatively sharing information and allowed only two-dimensional (vertical plane motion). It was built by the MITRE Corporation from 12 radar sites and supported the development and certification of the TCAS. The 1990s saw the International Civil Aviation Organization (ICAO) and Eurocontrol and lead development of simplified models with three-dimensional motion. Notably, the lowest altitude considered by the Eurocontrol model was 1,000-5,000 ft. This was indicative of the encounter models support for large manned aircraft avoidance.
+Airspace encounter models have evolved significantly over the past 35 years. Starting in the 1980s with a model of aircraft equipped with transponders that are cooperatively sharing information and allowed only two-dimensional (vertical plane motion). It was built by the MITRE Corporation from 12 radar sites and supported the development and certification of the TCAS. The 1990s saw the International Civil Aviation Organization (ICAO) and Eurocontrol and lead development of simplified models with three-dimensional motion. Notably, the lowest altitude considered by the Eurocontrol model version 2.1 was 1,000-5,000 ft. AGL. This was indicative of the encounter models support for large manned aircraft avoidance.
 
 The next major encounter model advancement started in 2006, with recognizing the need for three-dimension models with multiple acceleration points to support manned and unmanned safety analysis. In response starting in 2008, MIT Lincoln Laboratory started developing more advanced encounter models to represent a wider range of encounters.
 
@@ -498,7 +520,7 @@ The following are recommended seminal citations for  the original encounter mode
 
 ### Well Clear for UAS
 
-The [UAS ExCOM SARP](#uas-excom-science-and-research-panel) sampled the encounter models to generate manned aircraft intruder trajectories and simulate them with either large or small UAS trajectories to evaluate various candidates for an unmanned aircraft well clear seperation criteria. The [uncorrelated UAS model](#unmanned-uncorrelated-model) was specifically developed by the SARP to support small UAS research.
+The [UAS ExCOM SARP](#uas-excom-science-and-research-panel) supported the inital development of the discriminative [uncorrelated UAS model](#unmanned-uncorrelated-model) to support sUAS research, while also primarily leveraging the predating [uncorrelated manned model](#manned-uncorrelated-model). The SARP paired and simulated the UAS with manned aircraft trajectories, sampled from the manned models, to evaluate various candidates and subsequently recommend quantitative means to remain well clear for sUAS. These recommendations have been transitioned to standards developing organizations for when considering tactical DAA performance requirements.
 
 <details> <summary> E. T. Lester and A. Weinert, “Three Quantitative Means to Remain Well Clear for Small UAS in the Terminal Area,” in 2019 Integrated Communications, Navigation and Surveillance Conference (ICNS), Herndon, VA, USA, USA, 2019, pp. 1–17.</summary>
 <p>
@@ -603,7 +625,7 @@ Other well clear efforts that also leveraged the encounter models include the fo
 
 ### Evaluation of TCAS II Version 7.1
 
-The modern encounter models were first used for a safety study, funded by the TCAS program office, that evaluated and validated the upgrade of TCAS II to Version 7.1. The success of this evaluation laid the groundwork for subsequent safety studies.
+The modern encounter models were first used for a safety study, funded by the TCAS program office. These generative models evaluated and validated the upgrade of TCAS II to Version 7.1. The success of this evaluation laid the groundwork for subsequent safety studies.
 
 <details> <summary> L. P. Espindle, J. D. Griffith, and J. K. Kuchar, “Safety Analysis of Upgrading to TCAS Version 7.1 Using the 2008 U.S. Correlated Encounter Model,” Massachusetts Institute of Technology, Lincoln Laboratory, Project Report ATC-349, 2009.</summary>
 <p>

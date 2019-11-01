@@ -17,7 +17,10 @@ Due to the encounter models routine use in aviation research, we like to minimiz
     - [Developing features](#developing-features)
     - [Requesting documentation](#requesting-documentation)
   - [Convention Guide](#convention-guide)
+    - [Character Encoding](#character-encoding)
     - [Documentation](#documentation)
+    - [End of Line](#end-of-line)
+    - [System Environment Variables](#system-environment-variables)
     - [Variable Names](#variable-names)
     - [Units](#units)
     - [Colors](#colors)
@@ -97,9 +100,31 @@ Requesting more or a clarification of documentation is a valid feature request. 
 
 ## Convention Guide
 
+### Character Encoding
+
+To facilitate cross-platform compatibility, please use UTF-8 or ASCII. Note that UTF-8 is backwards compatible with ASCII.
+
 ### Documentation
 
 **Pull requests with no documentation will be rejected.** We believe documentation is good and integral to the success of a community software project. However, we recognize that everyone has different expectations and opinions on code documentation. [Self-documenting code](https://en.wikipedia.org/wiki/Self-documenting_code) should be sufficient in most cases but the use of inline comments to organize blocks of code are encouraged.
+
+### End of Line
+
+To facilitate cross-platform compatibility, please use unix style line endings of `LF (\n)`. For three popular text editors, here are instructions on how to enable `LF` endings.
+
+- [Atom: Line Ending Selector Package](https://github.com/atom/atom/tree/master/packages/line-ending-selector)
+- [Notepad++: Preferences](https://stackoverflow.com/q/8195839)
+- [VS Code: User Preferences](https://stackoverflow.com/q/52404044)
+
+### System Environment Variables
+
+Persistent system environment variables are used to when referencing across and within repositories. They should follow a naming convention of `AEM_TYPE_DESCRIPTION`.
+
+- Persistent system variables should be written using all capital letters
+- Strings should be delimitated by an underscore, `_`
+- A prefix of `AEM` should always be used for software within this organization
+- The second string should describe what the variable references. Use `DIR` for directories; `FILE` for files; and `SCRIPT` for shell scripts.
+- The third string should provide additional descriptive information.
 
 ### Variable Names
 
