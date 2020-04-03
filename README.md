@@ -393,6 +393,19 @@ A Bayesian network model trained on data from DroneShare.com, which was a websit
 }
 ```
 
+<details> <summary>   Eric  R.  Mueller. Multi-rotor  aircraft  collision  avoidance  using  partially  observable Markov decision processes.  PhD thesis, Stanford University, 2016. </summary>
+<p>
+
+```tex
+@inproceedings{Mueller2016thesis,
+title = {Multi-rotor aircraft collision avoidance using partially observable {M}arkov decision processes},
+author = {Eric R. Mueller},
+booktitle = {Stanford University},
+year = {2016},
+url = {http://purl.stanford.edu/rv444dz2833}
+}
+```
+
 </p>
 </details>
 
