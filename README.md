@@ -389,7 +389,7 @@ This model is applicable for some commercial operations, such as long linear inf
   author={Weinert, Andrew J and Edwards, Matthew and Alvarez, Luis and Michelle Katz, Sydney},
   booktitle={AIAA Scitech 2020 Forum},
   url = {https://arc.aiaa.org/doi/abs/10.2514/6.2020-0741},
-  doi = {10.2514/6.2020-0741}
+  doi = {10.2514/6.2020-0741},
   pages={0741},
   year={2020}
 }
