@@ -380,7 +380,7 @@ This model is applicable for some commercial operations, such as long linear inf
 
 A Bayesian network model trained on data from DroneShare.com, which was a website in which hobbyists could upload their telemetry log files. Data from over 75,000 flights was publicly available for download. 
 
-<details> <summary>  Eric R Mueller and Mykel J Kochenderfer. Simulation comparison of collision avoidancealgorithms for small multi-rotor aircraft. InAIAA Modeling and Simulation TechnologiesConference, page 3674, 2016.</summary>
+<details> <summary>  Eric R Mueller and Mykel J Kochenderfer. Simulation comparison of collision avoidancealgorithms for small multi-rotor aircraft. In AIAA Modeling and Simulation Technologies Conference, page 3674, 2016.</summary>
 <p>
 
 ```tex
@@ -390,19 +390,6 @@ A Bayesian network model trained on data from DroneShare.com, which was a websit
   booktitle={AIAA Modeling and Simulation Technologies Conference},
   pages={3674},
   year={2016}
-}
-```
-
-<details> <summary>   Eric  R.  Mueller.Multi-rotor  aircraft  collision  avoidance  using  partially  observableMarkov decision processes.  PhD thesis, Stanford University, 2016. </summary>
-<p>
-
-```tex
-@PhdThesis{Mueller2016thesis,
-Title = {Multi-rotor aircraft collision avoidance using partially observable {M}arkov decision processes},
-Author = {Eric R. Mueller},
-School = {Stanford University},
-Year = {2016},
-Url = {http://purl.stanford.edu/rv444dz2833}
 }
 ```
 
