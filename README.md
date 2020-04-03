@@ -76,7 +76,7 @@ As of 2015, the SARP addressed primary gaps of sUAS versus manned aircraft well 
 
 ## Encounter Model Requirements
 
-With the exception of the [uncorrelated UAS model](#unmanned-uncorrelated-model), each encounter model of manned aircraft is a Bayesian Network, a representation of a multivariate probability distribution as a directed acyclic graph and trained using aircraft operational data derived from radar or other sensing system flight track data. All these models were originally developed by MIT Lincoln Laboratory.
+With the exception of the [uncorrelated UAS model](#unmanned-uncorrelated-model), each encounter model of manned aircraft is a Bayesian Network, a representation of a multivariate probability distribution as a directed acyclic graph and trained using aircraft operational data derived from radar or other sensing system flight track data. With the exception of the [unmanned recreational model](unmanned-recreational-model) and [urban air mobility model](urban-air-moblity-model) which were developed in collaboration with Stanford University, all these models were originally developed by MIT Lincoln Laboratory.
 
 To enable assessment of aviation safety systems such as collision avoidance or detect and avoid systems, these models are designed with the following requirements:
 
@@ -375,6 +375,21 @@ This model is applicable for some commercial operations, such as long linear inf
 	year = {2018},
 	keywords = {Aircraft, Atmospheric modeling, FAA, Monte Carlo methods, Standards, Surveillance, Trajectory},
 	pages = {1--10}
+}
+```
+</p>
+</details>
+
+<details> <summary> Weinert, Andrew J., et al. "Representative Small UAS Trajectories for Encounter Modeling." AIAA Scitech 2020 Forum. 2020.</summary>
+<p>
+
+```tex
+@inproceedings{weinert2020representative,
+  title={Representative Small UAS Trajectories for Encounter Modeling},
+  author={Weinert, Andrew J and Edwards, Matthew and Alvarez, Luis and Michelle Katz, Sydney},
+  booktitle={AIAA Scitech 2020 Forum},
+  pages={0741},
+  year={2020}
 }
 ```
 </p>
