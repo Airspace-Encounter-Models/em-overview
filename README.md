@@ -2,7 +2,7 @@
 
 For many aviation safety studies, aircraft behavior is represented using encounter models, which are statistical models of how aircraft behave during close encounters. They are used to provide a realistic representation of the range of encounter flight dynamics where an aircraft collision avoidance system would be likely to alert. Encounter models represent the encounter geometry, but also the aircraft behavior (accelerations) during the course of the encounter. Encounter models have been developed for many different manned operational contexts, but there are new considerations for unmanned aircraft operations including the lower operating altitudes and interactions with service providers and other users.
 
-This GitHub organization and associated repositories are intended to eventually supersede the legacy [MIT Lincoln Laboratory hosted encounter model website](https://topa.atc.ll.mit.edu/lldata/) and align encounter model development with modern community driven software practices. As of 2019, this original MIT Lincoln Laboratory-hosted website has not been deprecated by this GitHub organization yet. Not all encounter model content is available on GitHub.
+This GitHub organization and associated repositories are intended to eventually supersede the legacy [MIT Lincoln Laboratory hosted encounter model website](https://topa.atc.ll.mit.edu/lldata/) and align encounter model development with modern community driven software practices. As of 2019, this original MIT Lincoln Laboratory-hosted website has not been deprecated by this GitHub organization yet. Not all encounter model content is available on GitHub. *Note that the legacy website is currently down for extended maintenance.*
 
 - [Airspace Encounter Models Overview](#airspace-encounter-models-overview)
 	- [Point of Contact](#point-of-contact)
@@ -19,6 +19,8 @@ This GitHub organization and associated repositories are intended to eventually 
 		- [Manned Uncorrelated Model](#manned-uncorrelated-model)
 		- [Manned Unconventional Model](#manned-unconventional-model)
 		- [Unmanned Uncorrelated Model](#unmanned-uncorrelated-model)
+		- [Unmanned Recreational Model](#unmanned-recreational-model)
+		- [Urban Air Mobility Uncorrelated Model](#urban-air-mobility-uncorrelated-model)
 	- [Encounter Categories](#encounter-categories)
 		- [Manned vs Manned](#manned-vs-manned)
 		- [Unmanned vs Manned](#unmanned-vs-manned)
@@ -72,7 +74,7 @@ As of 2015, the SARP addressed primary gaps of sUAS versus manned aircraft well 
 
 ## Encounter Model Requirements
 
-With the exception of the [uncorrelated UAS model](#unmanned-uncorrelated-model), each encounter model of manned aircraft is a Bayesian Network, a representation of a multivariate probability distribution as a directed acyclic graph and trained using aircraft operational data derived from radar or other sensing system flight track data. All these models were originally developed by MIT Lincoln Laboratory.
+With the exception of the [uncorrelated UAS model](#unmanned-uncorrelated-model), each encounter model of manned aircraft is a Bayesian Network, a representation of a multivariate probability distribution as a directed acyclic graph and trained using aircraft operational data derived from radar or other sensing system flight track data. With the exception of the [unmanned recreational model](#unmanned-recreational-model) and [urban air mobility uncorrelated model](#urban-air-mobility-uncorrelated-model) which were developed in collaboration with Stanford University, all these models were originally developed by MIT Lincoln Laboratory.
 
 To enable assessment of aviation safety systems such as collision avoidance or detect and avoid systems, these models are designed with the following requirements:
 
@@ -219,7 +221,7 @@ A Bayesian network trained using using the enhanced Traffic Management System (E
 
 ### Manned Helicopter Air Ambulance Model
 
-A Bayesian network describe trained using flight operational quality assurance (FOQA) data provided by a Massachusetts-based HAA provider.
+A Bayesian network trained using flight operational quality assurance (FOQA) data provided by a Massachusetts-based HAA provider.
 
 *Note a technical description of this model has not been publicly released yet. This model was developed to support sUAS well clear research. Until model-specific documentation is released, please cite the following paper.*
 
@@ -376,6 +378,63 @@ This model is applicable for some commercial operations, such as long linear inf
 </p>
 </details>
 
+<details> <summary> A. Weinert, et al. "Representative Small UAS Trajectories for Encounter Modeling." in AIAA Scitech 2020 Forum. 2020.</summary>
+<p>
+
+```tex
+@inproceedings{weinert2020representative,
+  title={Representative Small UAS Trajectories for Encounter Modeling},
+  author={Weinert, Andrew J and Edwards, Matthew and Alvarez, Luis and Michelle Katz, Sydney},
+  booktitle={AIAA Scitech 2020 Forum},
+  url = {https://arc.aiaa.org/doi/abs/10.2514/6.2020-0741},
+  doi = {10.2514/6.2020-0741},
+  pages={0741},
+  year={2020}
+}
+```
+</p>
+</details>
+
+### Unmanned Recreational Model
+
+A Bayesian network model trained on data from DroneShare, which was a website in which hobbyists could upload their telemetry log files. DroneShare is no longer active but data for download by the public was previously avaiable for over 75,000 flights.
+
+<details> <summary>  Eric R Mueller and Mykel J Kochenderfer. Simulation comparison of collision avoidancealgorithms for small multi-rotor aircraft. In AIAA Modeling and Simulation Technologies Conference, page 3674, 2016.</summary>
+<p>
+
+```tex
+@inproceedings{mueller2016simulation,
+  title={Simulation Comparison of Collision Avoidance Algorithms for Small Multi-Rotor Aircraft},
+  author={Mueller, Eric R and Kochenderfer, Mykel J},
+  booktitle={AIAA Modeling and Simulation Technologies Conference},
+  pages={3674},
+  year={2016}
+}
+```
+
+</p>
+</details>
+
+<details> <summary>   Eric  R.  Mueller. Multi-rotor  aircraft  collision  avoidance  using  partially  observable Markov decision processes.  PhD thesis, Stanford University, 2016. </summary>
+<p>
+
+```tex
+@PhdThesis{Mueller2016thesis,
+Title = {Multi-rotor aircraft collision avoidance using partially observable {M}arkov decision processes},
+Author = {Mueller, Eric R.},
+School = {Stanford University},
+Year = {2016},
+Url = {http://purl.stanford.edu/rv444dz2833}
+}
+```
+
+</p>
+</details>
+
+### Urban Air Mobility Uncorrelated Model
+
+Model for Urban Air Mobility (UAM) trajectories at low altitudes (mostly takeoff and landing trajectories). Trajectories are generated by sampling trajectory features and using them to constain a convex optimization problem that selects the position at each time step.
+
 ## Encounter Categories
 
 The previous [Documentation](#documentation) section provided technical details for each of the models. This section describes the different encounter categories when pairing trajectories from the models. Generally speaking, encounters can be correlated (e.g. ATC involvement) or uncorrelated (e.g. aircraft blunder into close proximity).
@@ -391,20 +450,20 @@ This section describes the encounter categories for different pairing of aircraf
 
 ### Manned vs Manned
 
-&nbsp; | [Discrete code](#manned-correlated-model) | [1200 Mode C / VFR](#manned-uncorrelated-model) | [Noncooperative conventional](#manned-unconventional-model) | [Noncooperative Unconventional](#manned-unconventional-model) | [Helicopter Air Ambulance](#manned-helicopter-air-ambulance-model) | UAM
+&nbsp; | [Discrete code](#manned-correlated-model) | [1200 Mode C / VFR](#manned-uncorrelated-model) | [Noncooperative conventional](#manned-unconventional-model) | [Noncooperative Unconventional](#manned-unconventional-model) | [Helicopter Air Ambulance](#manned-helicopter-air-ambulance-model) | [UAM](#urban-air-mobility-uncorrelated-model)
 :---  | :---:  | :---:  | :---:  | :---:  | :---: | :---:
 **[Discrete code / IFR](#manned-correlated-model)** | C | C | U | V | C | ?
 **[1200 Mode C / VFR](#manned-uncorrelated-model)** | C | U | U | V | U | ?
 **[Due Regard](#manned-due-regard)** | U | U | U | V | X | ?
-**UAM** | ? | ? | ? | ? | ? | ?
+**[UAM](#urban-air-mobility-uncorrelated-model)** | ? | ? | ? | ? | ? | ?
 
 ### Unmanned vs Manned
 
-&nbsp; | [Discrete code](#manned-correlated-model) | [1200 Mode C / VFR](#manned-uncorrelated-model) | [Noncooperative conventional](#manned-unconventional-model) | [Noncooperative Unconventional](#manned-unconventional-model) | [Helicopter Air Ambulance](#manned-helicopter-air-ambulance-model) | UAM
+&nbsp; | [Discrete code](#manned-correlated-model) | [1200 Mode C / VFR](#manned-uncorrelated-model) | [Noncooperative conventional](#manned-unconventional-model) | [Noncooperative Unconventional](#manned-unconventional-model) | [Helicopter Air Ambulance](#manned-helicopter-air-ambulance-model) | [UAM](#urban-air-mobility-uncorrelated-model)
 :---  | :---:  | :---:  | :---:  | :---:  | :---: | :---:
 **[sUAS - Commercial](#unmanned-uncorrelated-model)** | ? | U | U | V | U | ?
-**sUAS - Recreational** | X | X | X | X | X | ?
-**UAM** | ? | ? | ? | ? | ? | ?
+**[sUAS - Recreational](#unmanned-recreational-model)** | ? | U | U | U | U | ?
+**[UAM](#urban-air-mobility-uncorrelated-model)** | ? | ? | ? | ? | ? | ?
 
 ### Unmanned vs Unmanned
 
@@ -685,6 +744,8 @@ The modern encounter models were first used for a safety study, funded by the TC
 DISTRIBUTION STATEMENT A. Approved for public release. Distribution is unlimited.
 
 This material is based upon work supported by the Federal Aviation Administration under Air Force Contract No. FA8702-15-D-0001.
+
+Delivered to the U.S. Government with Unlimited Rights, as defined in DFARS Part 252.227-7013 or 7014 (Feb 2014). Notwithstanding any copyright notice, U.S. Government rights in this work are defined by DFARS 252.227-7013 or DFARS 252.227-7014 as detailed above. Use of this work other than as specifically authorized by the U.S. Government may violate any copyrights that exist in this work.
 
 Any opinions, findings, conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the Federal Aviation Administration.
 
