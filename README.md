@@ -19,8 +19,8 @@ This GitHub organization and associated repositories are intended to eventually 
 		- [Manned Uncorrelated Model](#manned-uncorrelated-model)
 		- [Manned Unconventional Model](#manned-unconventional-model)
 		- [Unmanned Uncorrelated Model](#unmanned-uncorrelated-model)
-		- [Hobbyist Drone Model](
-		#hobbyist-drone-model)
+		- [Unmanned Recreational Model](
+		#unmanned-recreational-model)
 		- [Urban Air Mobility Model](
 		#urban-air-mobility-model)
 	- [Encounter Categories](#encounter-categories)
@@ -380,7 +380,7 @@ This model is applicable for some commercial operations, such as long linear inf
 </p>
 </details>
 
-### Hobbyist Drone Model
+### Unmanned Recreational Model
 
 A Bayesian network model trained on data from DroneShare.com, which was a website in which hobbyists could upload their telemetry log files. Data from over 75,000 flights was publicly available for download. 
 
