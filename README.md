@@ -219,7 +219,7 @@ A Bayesian network trained using using the enhanced Traffic Management System (E
 
 ### Manned Helicopter Air Ambulance Model
 
-A Bayesian network describe trained using flight operational quality assurance (FOQA) data provided by a Massachusetts-based HAA provider.
+A Bayesian network trained using flight operational quality assurance (FOQA) data provided by a Massachusetts-based HAA provider.
 
 *Note a technical description of this model has not been publicly released yet. This model was developed to support sUAS well clear research. Until model-specific documentation is released, please cite the following paper.*
 
@@ -373,6 +373,39 @@ This model is applicable for some commercial operations, such as long linear inf
 	pages = {1--10}
 }
 ```
+</p>
+</details>
+
+### Hobbyist Drone Model
+
+A Bayesian network model trained on data from DroneShare.com, which was a website in which hobbyists could upload their telemetry log files. Data from over 75,000 flights was publicly available for download. 
+
+<details> <summary>  Eric R Mueller and Mykel J Kochenderfer. Simulation comparison of collision avoidancealgorithms for small multi-rotor aircraft. InAIAA Modeling and Simulation TechnologiesConference, page 3674, 2016.</summary>
+<p>
+
+```tex
+@inproceedings{mueller2016simulation,
+  title={Simulation Comparison of Collision Avoidance Algorithms for Small Multi-Rotor Aircraft},
+  author={Mueller, Eric R and Kochenderfer, Mykel J},
+  booktitle={AIAA Modeling and Simulation Technologies Conference},
+  pages={3674},
+  year={2016}
+}
+```
+
+<details> <summary>   Eric  R.  Mueller.Multi-rotor  aircraft  collision  avoidance  using  partially  observableMarkov decision processes.  PhD thesis, Stanford University, 2016. </summary>
+<p>
+
+```tex
+@PhdThesis{Mueller2016thesis,
+Title = {Multi-rotor aircraft collision avoidance using partially observable {M}arkov decision processes},
+Author = {Eric R. Mueller},
+School = {Stanford University},
+Year = {2016},
+Url = {http://purl.stanford.edu/rv444dz2833}
+}
+```
+
 </p>
 </details>
 
