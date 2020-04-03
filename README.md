@@ -449,7 +449,7 @@ This section describes the encounter categories for different pairing of aircraf
 
 ### Manned vs Manned
 
-&nbsp; | [Discrete code](#manned-correlated-model) | [1200 Mode C / VFR](#manned-uncorrelated-model) | [Noncooperative conventional](#manned-unconventional-model) | [Noncooperative Unconventional](#manned-unconventional-model) | [Helicopter Air Ambulance](#manned-helicopter-air-ambulance-model) | UAM
+&nbsp; | [Discrete code](#manned-correlated-model) | [1200 Mode C / VFR](#manned-uncorrelated-model) | [Noncooperative conventional](#manned-unconventional-model) | [Noncooperative Unconventional](#manned-unconventional-model) | [Helicopter Air Ambulance](#manned-helicopter-air-ambulance-model) | [UAM](#urban-air-mobility-model)
 :---  | :---:  | :---:  | :---:  | :---:  | :---: | :---:
 **[Discrete code / IFR](#manned-correlated-model)** | C | C | U | V | C | ?
 **[1200 Mode C / VFR](#manned-uncorrelated-model)** | C | U | U | V | U | ?
@@ -458,7 +458,7 @@ This section describes the encounter categories for different pairing of aircraf
 
 ### Unmanned vs Manned
 
-&nbsp; | [Discrete code](#manned-correlated-model) | [1200 Mode C / VFR](#manned-uncorrelated-model) | [Noncooperative conventional](#manned-unconventional-model) | [Noncooperative Unconventional](#manned-unconventional-model) | [Helicopter Air Ambulance](#manned-helicopter-air-ambulance-model) | UAM
+&nbsp; | [Discrete code](#manned-correlated-model) | [1200 Mode C / VFR](#manned-uncorrelated-model) | [Noncooperative conventional](#manned-unconventional-model) | [Noncooperative Unconventional](#manned-unconventional-model) | [Helicopter Air Ambulance](#manned-helicopter-air-ambulance-model) | [UAM](#urban-air-mobility-model)
 :---  | :---:  | :---:  | :---:  | :---:  | :---: | :---:
 **[sUAS - Commercial](#unmanned-uncorrelated-model)** | ? | U | U | V | U | ?
 **[sUAS - Recreational](#unmanned-recreational-model)** | ? | U | U | U | U | ?
