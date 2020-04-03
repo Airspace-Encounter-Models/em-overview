@@ -461,7 +461,7 @@ This section describes the encounter categories for different pairing of aircraf
 &nbsp; | [Discrete code](#manned-correlated-model) | [1200 Mode C / VFR](#manned-uncorrelated-model) | [Noncooperative conventional](#manned-unconventional-model) | [Noncooperative Unconventional](#manned-unconventional-model) | [Helicopter Air Ambulance](#manned-helicopter-air-ambulance-model) | UAM
 :---  | :---:  | :---:  | :---:  | :---:  | :---: | :---:
 **[sUAS - Commercial](#unmanned-uncorrelated-model)** | ? | U | U | V | U | ?
-**[sUAS - Recreational](#unmanned-recreational-model)** | U | U | U | U | U | ?
+**[sUAS - Recreational](#unmanned-recreational-model)** | ? | U | U | U | U | ?
 **UAM** | ? | ? | ? | ? | ? | ?
 
 ### Unmanned vs Unmanned
