@@ -454,7 +454,7 @@ This section describes the encounter categories for different pairing of aircraf
 **[Discrete code / IFR](#manned-correlated-model)** | C | C | U | V | C | ?
 **[1200 Mode C / VFR](#manned-uncorrelated-model)** | C | U | U | V | U | ?
 **[Due Regard](#manned-due-regard)** | U | U | U | V | X | ?
-**UAM** | ? | ? | ? | ? | ? | ?
+**[UAM](#urban-air-mobility-model)** | ? | ? | ? | ? | ? | ?
 
 ### Unmanned vs Manned
 
@@ -462,7 +462,7 @@ This section describes the encounter categories for different pairing of aircraf
 :---  | :---:  | :---:  | :---:  | :---:  | :---: | :---:
 **[sUAS - Commercial](#unmanned-uncorrelated-model)** | ? | U | U | V | U | ?
 **[sUAS - Recreational](#unmanned-recreational-model)** | ? | U | U | U | U | ?
-**UAM** | ? | ? | ? | ? | ? | ?
+**[UAM](#urban-air-mobility-model)** | ? | ? | ? | ? | ? | ?
 
 ### Unmanned vs Unmanned
 
