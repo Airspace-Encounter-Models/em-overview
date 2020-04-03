@@ -380,7 +380,7 @@ This model is applicable for some commercial operations, such as long linear inf
 </p>
 </details>
 
-<details> <summary> Weinert, Andrew J., et al. "Representative Small UAS Trajectories for Encounter Modeling." AIAA Scitech 2020 Forum. 2020.</summary>
+<details> <summary> A. Weinert, et al. "Representative Small UAS Trajectories for Encounter Modeling." in AIAA Scitech 2020 Forum. 2020.</summary>
 <p>
 
 ```tex
