@@ -1,6 +1,6 @@
 # How to contribute
 
-We encourage the use of the [GitHub Issues](https://guides.github.com/features/issues/) for bug report, new feature requests, etc. To streamline reporting, issues will only be enabled for the [em-overview](https://github.com/airspace-encounter-models/em-overview/) repository.
+We encourage the use of the [GitHub Issues](https://guides.github.com/features/issues/) for bug report, new feature requests, etc. To streamline reporting, refer to the [Projects for this organization](https://github.com/orgs/Airspace-Encounter-Models/projects).
 
 Due to the encounter models routine use in aviation research, we like to minimize the risk of inadvertent bugs or software challenges to maintain the encounter models as a trusted benchmark. To encourage traceability, development should occur via [forking](https://guides.github.com/activities/forking/).
 
