@@ -158,6 +158,8 @@ Citations are listed in descending chronological order, which the newest entries
 
 A Bayesian network used to generate random close encounters between transponder-equipped (cooperative) aircraft. This is the only model that explicitly models two aircraft.
 
+*Repository:* [em-model-manned-bayes](https://github.com/Airspace-Encounter-Models/em-model-manned-bayes)
+
 <details> <summary> N. Underhill, E. Harkleroad, R. Guendel, D. Maki, and M. Edwards, “Correlated Encounter Model for Cooperative Aircraft in the National Airspace System; Version 2.0,” Massachusetts Institute Technology Lincoln Laboratory Lexington United States, May 2018.</summary>
 <p>
 
@@ -198,6 +200,8 @@ A Bayesian network used to generate random close encounters between transponder-
 ### Manned Due Regard
 
 A Bayesian network trained using using the enhanced Traffic Management System (ETMS) data feed that was provided by the Volpe Center to describe aircraft operating in international airspace.
+
+*Repository:* [em-model-manned-bayes](https://github.com/Airspace-Encounter-Models/em-model-manned-bayes)
 
 <details> <summary> J. D. Griffith, M. W. Edwards, R. M. Miraflor, and A. J. Weinert, “Due Regard Encounter Model Version 1.0,” Massachusetts Institute of Technology, Lincoln Laboratory, Lexington, MA, Project Report ATC-397, Aug. 2013.</summary>
 <p>
@@ -247,9 +251,9 @@ A Bayesian network trained using flight operational quality assurance (FOQA) dat
 
 ### Manned Littoral Model
 
-A Bayesian network model that describes how aircraft behavior in the littoral regions of the United States. This model has been deprecated by the manned uncorrelated model 2.0.
+A Bayesian network model that describes how aircraft behavior in the littoral regions of the United States. This model has been deprecated by the manned uncorrelated model 2.0. Note that Appendix C in CASSATT-2 describes a revised process from the early encounter models for initializing uncorrelated encounters and estimating metrics.
 
-*Note that Appendix C in CASSATT-2 describes a revised process from the early encounter models for initializing uncorrelated encounters and estimating metrics.*
+*Repository:* [em-model-manned-bayes](https://github.com/Airspace-Encounter-Models/em-model-manned-bayes)
 
 <details> <summary> M. W. Edwards, “Encounter Models for the Littoral Regions of the National Airspace System” Massachusetts Institute of Technology, Lincoln Laboratory, CASSATT-2, Sep. 2010.</summary>
 <p>
@@ -273,6 +277,8 @@ A Bayesian network model that describes how aircraft behavior in the littoral re
 ### Manned Uncorrelated Model
 
 A Bayesian network model trained using 1200-code aircraft tracks.
+
+*Repository:* [em-model-manned-bayes](https://github.com/Airspace-Encounter-Models/em-model-manned-bayes)
 
 <details> <summary> A. J. Weinert, E. P. Harkleroad, J. D. Griffith, M. W. Edwards, and M. J. Kochenderfer, “Uncorrelated Encounter Model of the National Airspace System Version 2.0,” Massachusetts Institute of Technology, Lincoln Laboratory, Lexington, MA, Project Report ATC-404, Aug. 2013.</summary>
 <p>
@@ -335,6 +341,8 @@ A Bayesian network model trained using 1200-code aircraft tracks.
 ### Manned Unconventional Model
 
 A set of nine individual Bayesian network models encompassing ultralights, gliders, balloons, and airships. This model is based on more than 96,000 unconventional aircraft tracks.
+
+*Repository:* [em-model-manned-bayes](https://github.com/Airspace-Encounter-Models/em-model-manned-bayes)
 
 <details> <summary> M. W. Edwards, M. J. Kochendedrfer, J. K. Kuchar, and L. P. Espindle, “Encounter Models for Unconventional Aircraft, Version 1.0,” Massachusetts Institute of Technology, Lincoln Laboratory, Project Report ATC-348, 2009.</summary>
 <p>
@@ -742,6 +750,8 @@ The modern encounter models were first used for a safety study, funded by the TC
 ## Distribution Statement
 
 DISTRIBUTION STATEMENT A. Approved for public release. Distribution is unlimited.
+
+© 2019, 2020 Massachusetts Institute of Technology.
 
 This material is based upon work supported by the Federal Aviation Administration under Air Force Contract No. FA8702-15-D-0001.
 
