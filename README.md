@@ -16,8 +16,8 @@ This GitHub organization and associated repositories are intended to eventually 
 		- [Manned Due Regard](#manned-due-regard)
 		- [Manned Helicopter Air Ambulance Model](#manned-helicopter-air-ambulance-model)
 		- [Manned Littoral Model](#manned-littoral-model)
-		- [Manned Uncorrelated Model](#manned-uncorrelated-model)
-		- [Manned Unconventional Model](#manned-unconventional-model)
+		- [Manned Uncorrelated-Conventional Models](#manned-uncorrelated-conventional-models)
+		- [Manned Uncorrelated-Unconventional Model](#manned-uncorrelated-unconventional-model)
 		- [Unmanned Uncorrelated Model](#unmanned-uncorrelated-model)
 		- [Unmanned Recreational Model](#unmanned-recreational-model)
 		- [Urban Air Mobility Uncorrelated Model](#urban-air-mobility-uncorrelated-model)
@@ -94,26 +94,6 @@ Generally speaking, there are two types of encounter model: correlated and uncor
 Citations are listed in descending chronological order, which the newest entries listed first. Clicking the arrow next the citation will display the Bibtex entry for each citation. Each Bibtex entry includes a URL to access the citation. All citations can also be found in the Zotero group, [airspace-encounter-model](https://www.zotero.org/groups/2359172/airspace-encounter-models/items).
 
 ### Introductory
-
-<details> <summary> A. Weinert, N. Underhill, and A. Wicks, “Developing a Low Altitude Manned Encounter Model Using ADS-B Observations,” in 2019 IEEE Aerospace Conference, Big Sky, MT, 2019.</summary>
-<p>
-
-```tex
-@inproceedings{weinertDevelopingLowAltitude2019,
-	title = {Developing a {Low} {Altitude} {Manned} {Encounter} {Model} {Using} {ADS}-{B} {Observations}},
-	url = {https://doi.org/10.1109/AERO.2019.8741848},
-	doi = {10.1109/AERO.2019.8741848},
-	address = {Big Sky, MT},
-	language = {en},
-	booktitle = {2019 {IEEE} {Aerospace} {Conference}},
-	author = {Weinert, Andrew and Underhill, Ngaire and Wicks, Ashley},
-	month = mar,
-	year = {2019},
-	pages = {1--8}
-}
-```
-</p>
-</details>
 
 <details> <summary> M. J. Kochenderfer, M. W. M. Edwards, L. P. Espindle, J. K. Kuchar, and J. D. Griffith, “Airspace Encounter Models for Estimating Collision Risk,” Journal of Guidance, Control, and Dynamics, vol. 33, no. 2, pp. 487–499, Apr. 2010.</summary>
 <p>
@@ -270,9 +250,49 @@ A Bayesian network model that describes how aircraft behavior in the littoral re
 </p>
 </details>
 
-### Manned Uncorrelated Model
+### Manned Uncorrelated-Conventional Models
 
-A Bayesian network model trained using 1200-code aircraft tracks.
+A Bayesian network model that assume the aircraft trajectories are independent and that there is no dependence on aircraft behavior before a collision avoidance system acts. It is assumed that air traffic control or an active unmanned traffic management system is not providing guidance. This uncorrelated assumption enables individual aircraft trajectories can be modeled independently and then combined in a separate encounter initialization process
+
+<details> <summary> A. Weinert, N. Underhill, B. Gill, and A. Wicks, “Processing of Crowdsourced Observations of Aircraft in a High Performance Computing Environment,” arXiv:2008.00861 [cs], Aug. 2020.</summary>
+<p>
+
+```tex
+@article{weinertProcessingCrowdsourcedObservations2020,
+  url = {http://arxiv.org/abs/2008.00861},
+  archivePrefix = {arXiv},
+  eprinttype = {arxiv},
+  eprint = {2008.00861},
+  primaryClass = {cs},
+  title = {Processing of {{Crowdsourced Observations}} of {{Aircraft}} in a {{High Performance Computing Environment}}},
+  author = {Weinert, Andrew and Underhill, Ngaire and Gill, Bilal and Wicks, Ashley},
+  month = aug,
+  year = {2020},
+  keywords = {Computer Science - Computational Engineering; Finance; and Science,Computer Science - Distributed; Parallel; and Cluster Computing,E.2,H.3,I.6.5}
+}
+```
+</p>
+</details>
+
+<details> <summary> A. Weinert, N. Underhill, and A. Wicks, “Developing a Low Altitude Manned Encounter Model Using ADS-B Observations,” in 2019 IEEE Aerospace Conference, Big Sky, MT, 2019.</summary>
+<p>
+
+```tex
+@inproceedings{weinertDevelopingLowAltitude2019,
+	title = {Developing a {Low} {Altitude} {Manned} {Encounter} {Model} {Using} {ADS}-{B} {Observations}},
+	url = {https://doi.org/10.1109/AERO.2019.8741848},
+	doi = {10.1109/AERO.2019.8741848},
+	address = {Big Sky, MT},
+	language = {en},
+	booktitle = {2019 {IEEE} {Aerospace} {Conference}},
+	author = {Weinert, Andrew and Underhill, Ngaire and Wicks, Ashley},
+	month = mar,
+	year = {2019},
+	pages = {1--8}
+}
+```
+</p>
+</details>
 
 <details> <summary> A. J. Weinert, E. P. Harkleroad, J. D. Griffith, M. W. Edwards, and M. J. Kochenderfer, “Uncorrelated Encounter Model of the National Airspace System Version 2.0,” Massachusetts Institute of Technology, Lincoln Laboratory, Lexington, MA, Project Report ATC-404, Aug. 2013.</summary>
 <p>
@@ -332,7 +352,7 @@ A Bayesian network model trained using 1200-code aircraft tracks.
 </p>
 </details>
 
-### Manned Unconventional Model
+### Manned Uncorrelated-Unconventional Model
 
 A set of nine individual Bayesian network models encompassing ultralights, gliders, balloons, and airships. This model is based on more than 96,000 unconventional aircraft tracks.
 
@@ -359,6 +379,26 @@ This discriminative model takes into account the operational intent of UAS comme
   
 This model is applicable for some commercial operations, such as long linear infrastructure inspection, governed by 14 CFR Part 107 (sUAS rule) or 14 CFR Part 135 (air carrier). It is not applicable for sUAS recreational and amateur operations governed by 14 CFR Part 101 or 49 U.S.C. 44809.
 
+<details> <summary> A. J. Weinert, M. Edwards, L. Alvarez, and S. M. Katz, “Representative Small UAS Trajectories for Encounter Modeling,” presented at the AIAA Scitech 2020 Forum, Orlando, FL, Jan. 2020.</summary>
+<p>
+
+```tex
+@inproceedings{weinertRepresentativeSmallUAS2020,
+  url = {https://doi.org/10.2514/6.2020-0741},
+  address = {{Orlando, FL}},
+  title = {Representative {{Small UAS Trajectories}} for {{Encounter Modeling}}},
+  booktitle = {{{AIAA Scitech}} 2020 {{Forum}}},
+  publisher = {{American Institute of Aeronautics and Astronautics}},
+  doi = {10.2514/6.2020-0741},
+  author = {Weinert, Andrew J. and Edwards, Matthew and Alvarez, Luis and Katz, Sydney Michelle},
+  month = jan,
+  year = {2020}
+}
+
+```
+</p>
+</details>
+
 <details> <summary> A. Weinert and N. Underhill, “Generating Representative Small UAS Trajectories using Open Source Data,” in 2018 IEEE/AIAA 37th Digital Avionics Systems Conference (DASC), 2018, pp. 1–10.</summary>
 <p>
 
@@ -373,23 +413,6 @@ This model is applicable for some commercial operations, such as long linear inf
 	year = {2018},
 	keywords = {Aircraft, Atmospheric modeling, FAA, Monte Carlo methods, Standards, Surveillance, Trajectory},
 	pages = {1--10}
-}
-```
-</p>
-</details>
-
-<details> <summary> A. Weinert, et al. "Representative Small UAS Trajectories for Encounter Modeling." in AIAA Scitech 2020 Forum. 2020.</summary>
-<p>
-
-```tex
-@inproceedings{weinert2020representative,
-  title={Representative Small UAS Trajectories for Encounter Modeling},
-  author={Weinert, Andrew J and Edwards, Matthew and Alvarez, Luis and Michelle Katz, Sydney},
-  booktitle={AIAA Scitech 2020 Forum},
-  url = {https://arc.aiaa.org/doi/abs/10.2514/6.2020-0741},
-  doi = {10.2514/6.2020-0741},
-  pages={0741},
-  year={2020}
 }
 ```
 </p>
