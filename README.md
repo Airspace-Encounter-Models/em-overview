@@ -471,7 +471,7 @@ Model for Urban Air Mobility (UAM) trajectories at low altitudes (mostly takeoff
 
 The MIT LL Terminal Encounter Model (LLTEM) was developed to generate statistically representative encounters between unmanned aircraft and manned aircraft in terminal airspace. The model presently addresses unmanned aircraft on straight-in approach to a Class D airport encountering a second aircraft either landing or taking off. This is the one of the few models that explicitly models two aircraft.
 
-*Note a technical description of this model has not been publicly released yet. This model was developed to support sUAS well clear research. Until model-specific documentation is released, please cite the following paper.*
+*Note a technical description of this model has not been publicly released yet. This model was developed to support UAS well clear research.*
 
 ## Encounter Categories
 
