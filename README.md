@@ -259,6 +259,30 @@ A Bayesian network model that describes how aircraft behavior in the littoral re
 
 A Bayesian network model that assume the aircraft trajectories are independent and that there is no dependence on aircraft behavior before a collision avoidance system acts. It is assumed that air traffic control or an active unmanned traffic management system is not providing guidance. This uncorrelated assumption enables individual aircraft trajectories can be modeled independently and then combined in a separate encounter initialization process
 
+*Repository:* [em-model-manned-bayes](https://github.com/Airspace-Encounter-Models/em-model-manned-bayes)
+
+<details> <summary> N. Underhill and A. Weinert, , “Applicability and Surrogacy of Uncorrelated Airspace Encounter Models at Low Altitudes,” arXiv:2103.04753 [cs.LG], Mar. 2021.</summary>
+<p>
+
+```tex
+@article{underhillApplicabilitySurrogacyUncorrelated2021,
+  title = {Applicability and {{Surrogacy}} of {{Uncorrelated Airspace Encounter Models}} at {{Low Altitudes}}},
+  author = {Underhill, Ngaire and Weinert, Andrew},
+  year = {2021},
+  month = mar,
+  pages = {8},
+  archiveprefix = {arXiv},
+  eprint = {2103.04753},
+  eprinttype = {arxiv},
+  journal = {arXiv:2103.04753 [cs, eess]},
+  keywords = {Computer Science - Machine Learning,Electrical Engineering and Systems Science - Systems and Control},
+  primaryclass = {cs, eess}
+}
+```
+</p>
+</details>
+
+
 <details> <summary> A. Weinert, N. Underhill, B. Gill, and A. Wicks, “Processing of Crowdsourced Observations of Aircraft in a High Performance Computing Environment,” arXiv:2008.00861 [cs], Aug. 2020.</summary>
 <p>
 
@@ -298,8 +322,6 @@ A Bayesian network model that assume the aircraft trajectories are independent a
 ```
 </p>
 </details>
-
-*Repository:* [em-model-manned-bayes](https://github.com/Airspace-Encounter-Models/em-model-manned-bayes)
 
 <details> <summary> A. J. Weinert, E. P. Harkleroad, J. D. Griffith, M. W. Edwards, and M. J. Kochenderfer, “Uncorrelated Encounter Model of the National Airspace System Version 2.0,” Massachusetts Institute of Technology, Lincoln Laboratory, Lexington, MA, Project Report ATC-404, Aug. 2013.</summary>
 <p>
